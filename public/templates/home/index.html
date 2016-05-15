@@ -17,26 +17,7 @@
                 <div class="list">
 
                     <div class="item-list clearfix" ng-repeat="post in posts">
-                        <div class="item-media float-left">
-                            <a href="javascript:void(0);" ng-click="showPost(post.id)"><img src="{{ post.thumbnail.image_url }}" width="80" class="centered" /></a>
-                        </div>
-                        <div class="item-content">
-                            <h3><a href="javascript:void(0);" ng-click="showPost(post.id)">{{ post.name }}</a></h3>
-                            <p><a href="javascript:void(0);" ng-click="showPost(post.id)">{{ post.tagline }}</a></p>
-                            <div class="item-actions">
-                                <div class="chip-sm mb-5">
-                                    <span class="chip-name"><span class="icon icon-star-full"></span> {{ post.votes_count }}</span>
-                                </div>
-                                <div class="chip-sm mb-5">
-                                    <span class="chip-name"><span class="icon icon-bubble"></span> {{ post.comments_count }}</span>
-                                </div>
-                                <div class="float-right">
-                                    <div class="chip-sm" ng-if="post.topics[0]">
-                                        <span class="chip-name topic-name">{{ post.topics[0].name }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="container-item-list" ng-include="'/templates/posts/item-list.html'"></div>
                     </div>
 
                 </div>

@@ -7,7 +7,7 @@ module.exports = function ($scope, $http, $location, Posts) {
 
     $scope.orderBy = 'popular';
     $scope.posts = [];
-    $scope.post = {};
+    $scope.post = null;
 
     $scope.$on('$locationChangeStart', function (event, next, current) {
         var path = $location.path();
@@ -41,26 +41,20 @@ module.exports = function ($scope, $http, $location, Posts) {
         });
     };
 
-    $scope.showPost = function (id) {
+    $scope.showPost = function (id, name, tagline) {
+        
+        $scope.post = {};
+        
         var posts = Posts.get({id: id}, function() {
-            $scope.post = posts.post;
-            
             var comments = Posts.comments({id: id}, function() {
+                $scope.post = posts.post;
                 $scope.post.all_comments = comments.comments;
             })
         });
-        
-        document.getElementById('modal').className = 'modal active';
     };
     
-    $scope.closeModal = function() {
-        document.getElementById('modal').className = 'modal';
-    }
-
-    $scope.toggleMenu = function () {
-
-        var display = document.getElementById('menu').style.display;
-        document.getElementById('menu').style.display = display == 'block' ? 'none' : 'block';
+    $scope.erasePost = function() {
+        $scope.post = null;
     };
 
 };

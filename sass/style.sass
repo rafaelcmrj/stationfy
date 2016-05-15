@@ -78,14 +78,16 @@ nav
                 font-size: 16px
             a
                 color: $darker-gray
-            .item-media
-                margin-right: 20px
-                min-width: 80px
-            .item-content
+            .container-item-list
                 width: 100%
-                .item-actions
-                    .topic-name
-                        text-transform: uppercase
+                .item-media
+                    margin-right: 20px
+                    min-width: 80px
+                .item-content
+                    width: 100%
+                    .item-actions
+                        .topic-name
+                            text-transform: uppercase
     .load-more
         a
             color: $base-gray
@@ -94,6 +96,10 @@ nav
             &:hover
                 text-decoration: underline
 .modal
+    .loading
+        position: absolute
+        top: 50%
+        left: 50%
     .modal-image
         background-size: cover
         height: 50px
