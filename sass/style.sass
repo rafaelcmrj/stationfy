@@ -1,0 +1,120 @@
+$border-color: #EEE
+$shadow-color: #DEDEDE
+$base-gray: #AAA
+$lighter-gray: #DDD
+$darker-gray: #666
+
+body
+    background-color: #f9f9f9
+    font-family: 'Raleway', serif
+a
+    text-decoration: none
+h1,h2,h3,h4,h5,h6
+    margin: 0px
+header
+    background-color: white
+    -webkit-box-shadow: 0 8px 6px -5px $shadow-color
+    -moz-box-shadow: 0 8px 6px -5px $shadow-color
+    box-shadow: 0 8px 6px -5px $shadow-color
+    padding: 10px 0px
+    .form-group
+        width: 100px
+    .profile-info
+        position: relative
+        .menu
+            display: none
+            position: absolute
+            right: 0px
+            top: 40px
+            width: 200px
+        &:hover
+            .menu
+                display: block
+#main-content
+    margin-top: 25px
+    nav,section,aside
+        box-sizing: border-box
+        -moz-box-sizing: border-box
+        -webkit-box-sizing: border-box
+        padding: 0px 10px
+nav
+    ul
+        margin-bottom: 40px
+        li
+            color: $base-gray
+            list-style: none
+        .title
+            border-bottom: 1px solid $border-color
+            color: black
+            font-weight: bold
+            padding-bottom: 10px
+.box
+    background-color: white
+    border: 1px solid $border-color
+    margin-bottom: 20px
+    padding: 15px 20px
+    .header
+        h2
+            font-size: 18px
+        h3
+            font-size: 12px
+            font-weight: bold
+        .order-by
+            font-size: 12px
+            color: $lighter-gray
+            a
+                color: $base-gray
+            .active
+                color: $darker-gray
+                font-weight: bold
+    .list
+        .item-list
+            border-top: 1px solid $border-color
+            display: flex
+            padding: 20px 0px
+            h3
+                font-size: 20px
+            h4
+                font-size: 16px
+            a
+                color: $darker-gray
+            .item-media
+                margin-right: 20px
+                min-width: 80px
+            .item-content
+                width: 100%
+                .item-actions
+                    .topic-name
+                        text-transform: uppercase
+    .load-more
+        a
+            color: $base-gray
+            font-size: 12px
+            font-weight: bold
+            &:hover
+                text-decoration: underline
+.modal
+    .modal-image
+        background-size: cover
+        height: 50px
+        width: 100%
+    .topics
+        padding: 0px 20px
+        box-sizing: border-box
+        -moz-box-sizing: border-box
+        -webkit-box-sizing: border-box
+    .chip-sm
+        margin-right: 5px
+        margin-bottom: 5px
+    ul.comments
+        li
+            background-color: #FCFCFC
+            border: $border-color 1px solid
+            list-style: none
+            padding: 5px 10px
+            ul
+                li
+                    border: 0px
+                    border-top: $border-color 1px solid
+            p
+                word-wrap:break-word

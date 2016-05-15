@@ -1,0 +1,59 @@
+<div class="modal" id="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+        <div class="modal-header">
+            <button class="btn btn-clear float-right" ng-click="closeModal()"></button>
+            <div class="modal-title">
+                <h5>{{ post.name }}</h5>
+                <p>{{ post.tagline }}</p>
+            </div>
+        </div>
+        <!--<div class="loading"></div>-->
+        <div class="modal-body">
+            <div class="content" id="modal-content">
+                <div class="modal-image mb-10" style="background-image: url('{{ post.screenshot_url['850px'] }}')"></div>
+                <a href="{{ post.redirect_url }}" class="btn btn-primary">GET IT</a>
+                <button class="btn"><span class="icon icon-star-full"></span> {{ post.votes_count }}</button>
+                <div class="container mt-10">
+                    <figure class="avatar avatar-lg mr-10">
+                        <img src="{{ post.user.image_url['48px'] }}" />
+                    </figure> {{ post.user.name }}
+                </div>
+
+                <div class="container mt-10">
+                    <div class="columns">
+                        <div class="col-sm-9">
+                            <ul class="comments">
+                                <li ng-repeat="comment in post.all_comments">
+                                    <figure class="avatar avatar-sm mr-10">
+                                        <img src="{{ comment.user.image_url['48px'] }}" />
+                                    </figure> <strong>{{ comment.user.name }}</strong>
+                                    <p ng-bind-html="comment.body"></p>
+                                    <p><strong class="mr-10"><small>TWEET</small></strong><strong><small>SHARE</small></strong></p>
+                                    <ul ng-if="comment.child_comments_count > 0">
+                                        <li ng-repeat="child_comment in comment.child_comments">
+                                            <figure class="avatar avatar-sm mr-10">
+                                                <img src="{{ child_comment.user.image_url['48px'] }}" />
+                                            </figure> <strong>SUB{{ child_comment.user.name }}</strong>
+                                            <p ng-bind-html="child_comment.body"></p>
+                                            <p><strong class="mr-10"><small>TWEET</small></strong><strong><small>SHARE</small></strong></p>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 topics">
+                            <div class="chip-sm" ng-repeat="topic in post.topics">
+                                <span class="chip-name topic-name">{{ topic.name }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-link" ng-click="closeModal()">Close</button>
+        </div>
+    </div>
+</div>

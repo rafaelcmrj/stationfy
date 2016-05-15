@@ -1,0 +1,110 @@
+body {
+  background-color: #f9f9f9;
+  font-family: "Raleway", serif; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px; }
+
+header {
+  background-color: white;
+  -webkit-box-shadow: 0 8px 6px -5px #DEDEDE;
+  -moz-box-shadow: 0 8px 6px -5px #DEDEDE;
+  box-shadow: 0 8px 6px -5px #DEDEDE;
+  padding: 10px 0px; }
+  header .form-group {
+    width: 100px; }
+  header .profile-info {
+    position: relative; }
+    header .profile-info .menu {
+      display: none;
+      position: absolute;
+      right: 0px;
+      top: 40px;
+      width: 200px; }
+    header .profile-info:hover .menu {
+      display: block; }
+
+#main-content {
+  margin-top: 25px; }
+  #main-content nav, #main-content section, #main-content aside {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0px 10px; }
+
+nav ul {
+  margin-bottom: 40px; }
+  nav ul li {
+    color: #AAA;
+    list-style: none; }
+  nav ul .title {
+    border-bottom: 1px solid #EEE;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 10px; }
+
+.box {
+  background-color: white;
+  border: 1px solid #EEE;
+  margin-bottom: 20px;
+  padding: 15px 20px; }
+  .box .header h2 {
+    font-size: 18px; }
+  .box .header h3 {
+    font-size: 12px;
+    font-weight: bold; }
+  .box .header .order-by {
+    font-size: 12px;
+    color: #DDD; }
+    .box .header .order-by a {
+      color: #AAA; }
+    .box .header .order-by .active {
+      color: #666;
+      font-weight: bold; }
+  .box .list .item-list {
+    border-top: 1px solid #EEE;
+    display: flex;
+    padding: 20px 0px; }
+    .box .list .item-list h3 {
+      font-size: 20px; }
+    .box .list .item-list h4 {
+      font-size: 16px; }
+    .box .list .item-list a {
+      color: #666; }
+    .box .list .item-list .item-media {
+      margin-right: 20px;
+      min-width: 80px; }
+    .box .list .item-list .item-content {
+      width: 100%; }
+      .box .list .item-list .item-content .item-actions .topic-name {
+        text-transform: uppercase; }
+  .box .load-more a {
+    color: #AAA;
+    font-size: 12px;
+    font-weight: bold; }
+    .box .load-more a:hover {
+      text-decoration: underline; }
+
+.modal .modal-image {
+  background-size: cover;
+  height: 50px;
+  width: 100%; }
+.modal .topics {
+  padding: 0px 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+.modal .chip-sm {
+  margin-right: 5px;
+  margin-bottom: 5px; }
+.modal ul.comments li {
+  background-color: #FCFCFC;
+  border: #EEE 1px solid;
+  list-style: none;
+  padding: 5px 10px; }
+  .modal ul.comments li ul li {
+    border: 0px;
+    border-top: #EEE 1px solid; }
